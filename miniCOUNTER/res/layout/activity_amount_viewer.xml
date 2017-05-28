@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_amount_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relative_add_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_bottom_black"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/editText_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="1dp"
+            android:layout_toLeftOf="@+id/amount_add"
+            android:background="@drawable/background_edittext_blue"
+            android:ems="10"
+            android:hint="amount"
+            android:inputType="number"
+            android:padding="2dp"
+            android:textSize="50dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/amount_add"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_curved_top"
+            android:minHeight="70dp"
+            android:text="+"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/amount_minus"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amount_add"
+            android:layout_margin="1dp"
+            android:layout_toRightOf="@+id/editText_amount"
+            android:background="@drawable/button_curved_bottom"
+            android:minHeight="70dp"
+            android:text="-"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/editText_details"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignLeft="@+id/editText_amount"
+            android:layout_alignRight="@+id/editText_amount"
+            android:layout_below="@+id/editText_amount"
+            android:layout_margin="1dp"
+            android:background="@drawable/background_edittext_blue"
+            android:ems="10"
+            android:hint="details"
+            android:padding="2dp" />
+
+        <Button
+            android:id="@+id/button_collapse"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/amount_minus"
+            android:layout_below="@+id/amount_minus"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_action_collapse"
+            android:maxHeight="12dp"
+            android:maxWidth="12dp"
+            android:minHeight="12dip"
+            android:minWidth="12dip" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_amount_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relative_add_amount" >
+
+        <LinearLayout
+            android:id="@+id/linear_amount_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
